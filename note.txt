@@ -1,0 +1,46 @@
+>>>>>>>>>>>>>HTML<<<<<<<<<<<<<
+1) first we create a div class name container
+2) On that same div container we put another div with class 'to do app' 
+3) beneath the surface of 'todo-app' div we create a 'h2' heading with TodoList name on it. we put an image on it which is a 'Todo' image symbol.>>
+4)again we create another div with class name 'row' inside the to-do-app 
+5) inside the row div we create 1st and input with id input-box 2nd a button and the close the 'row' div.
+5) After all that stuff i create and <ul> with id name list-container after the row div and inside the to-do-app div and i create a one <li> with class name checked and put some text on it. and i closed the <ul> tag.
+6) after doing all this, i closed the to-do-app </div> and  and then i closed the container </div> as well inside which everything was kept. 
+...............End-of-HTML..............
+
+<<<<<<<<<<<<<CSS>>>>>>>>>>>>
+1) we set the document margin padding font and box-sizing
+2) Then we style the container width min height, background, padding etc.
+3) we style the todo-app with width, max-width, background, margin, padding, border-radious etc.
+4) then we style [todo-app h2] with color, display, align-items, margin-bottom
+5.) then we style [todo-app h2 img] with width and margin-left.
+6) we style row with display, align-items, justify-content, background, border-radius, padding-left, margin-bottom...
+7) then we style input with flex:1;, border, outline, background, padding, 
+8) we style button with border, ouline, padding, backgorund, color, font-size, cursor, border-radious. etc
+9) then we style ul li with list-style, font-size, padding, user-select, cursor, position. etc
+10) later on  we style [ul li::before] with content: '', position, height, width, border-radious, background-image with url(images/unchecked)background-size, backgorund-position, top, left
+11) [ul li.checked] style color, text-decoration. 
+12) afterwords [ul li.checked::before] background-image with url(check)
+13) then i style [ul li span] with position, right, top, width, height, font-size, color, line-height, text-align, border-radious.
+14) last [ul li span:hover] background #edeef0;
+......................End-of-CSS.................
+
+<<<<<<<<<<<<<<<<<<<<<<<>JavaScript<>>>>>>>>>>>>>>>>>>>>>>>>>>>
+1) first we create a variable which is inputbox and assign id inputbox.
+2) second we create another variable listContainer and asign the value of list-container.
+3) next we create a function named addTask() and set a condition if user type nothing then (inputbox.value ==='') Give alert. write something.
+4) next else{ we create an variable named li and create a element li} and we connect li variable to innerHTML and assign the first variable which is inputbox with .value to get the vale from user. so we are getting an 'text vale' and showing on display using new li.
+5) next we append li to listContainer which is the second variable we created.
+6) following that we create another variable wich is 'span' and we connect innerHTML to it and assing a value = '\u00d7'. and then we append span to li. and closed the else statement
+7) after doing this we we assin an new value to the first variable which is input.value = ''; which means we assing new black variable;
+8) and we put the another functin beneath the addtask fun  'saveData()' and we closed the function.
+9) ok and then we put Evenet listener to second variable listContainer and inside event function we put if statement with (e.target.tagname === 'LI'){ and after that e.target.classList.toggle('checked'); 
+and place saveData() functin again
+} the we close the if 
+10) then else if- (e.target.tagName === 'SPAN') and under the else if e.target.parentElement.remove(); and we again saveData() and we close the (else if) 
+11)and after all we close the event function and put (false in the last)
+12) then we create to vary function 1st one is function saveData() and under this function we set something into localstorage like setItem('data', listContainer.innerHTML) i didn't understand this line but we can check it out in the ineternet  
+13)and we close the saveData() function and after that we create our last function which is ShowTask() with listContainer.innerHTML = Localstorage.getItem('data')} and we closed it too.
+14) and end the end again showTask(); for the convincence.
+
+
